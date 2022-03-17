@@ -1,0 +1,90 @@
+{
+    "language": "vi",
+    "keyActive": "",
+    "DeveloperMode": false,
+    "autoCreateDB": true,
+    "allowInbox": true,
+    "autoClean": false,
+    "commandDisabled": [],
+    "eventDisabled": [],
+    "EMAIL": "",
+    "PASSWORD": "",
+    "OTPKEY": "",
+    "BOTNAME": "Trùm xạo lone",
+    "PREFIX": ",",
+    "ADMINBOT": [
+        "100013530094367",
+        ""
+    ],
+    "DATABASE": {
+        "sqlite": {
+            "storage": "data.sqlite"
+        }
+    },
+    "APPSTATEPATH": "appstate.json",
+    "FCAOption": {
+        "forceLogin": true,
+        "listenEvents": true,
+        "pauseLog": true,
+        "logLevel": "error",
+        "selfListen": false,
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36"
+    },
+    "version": "1.2.14",
+    "adminUpdate": {
+        "autoUnsend": true,
+        "sendNoti": true,
+        "timeToUnsend": 10
+    },
+    "sauce": {
+        "SAUCENAO_API": "61e802b1478f8e85198f28ed6ac2de6efe5d0a41"
+    },
+    "rankup": {
+        "autoUnsend": true,
+        "unsendMessageAfter": 5
+    },
+    "banner": {
+        "APIKEY": "ntkhang"
+    },
+    "checktt": {
+        "maxColumn": 10
+    },
+    "help": {
+        "autoUnsend": true,
+        "delayUnsend": 20
+    },
+    "daily": {
+        "cooldownTime": 43200000,
+        "rewardCoin": 200000
+    },
+    "linkword": {
+        "APIKEY": "Meew_L3jyFl0AV7HUebox4g6j1t59CV6y9r"
+    },
+    "weather": {
+        "OPEN_WEATHER": "035fb446f22456eb35b286656068cc07"
+    },
+    "log": {
+        "enable": true
+    },
+    "work": {
+        "cooldownTime": 5
+    },
+    "sing": {
+        "YOUTUBE_API": "AIzaSyBZjYk2QtAvsZjAzUJ5o4qGl8eRl6gr2SA"
+    },
+    "cauca": {
+        "cooldownTime": 1200000
+    },
+    "fbvideo": {
+        "API_KEY": "mzk_I5BZBUVNPAH0LU2MPOC"
+    },
+    "tiktok": {
+        "API_KEY": "mzk_I5BZBUVNPAH0LU2MPOC"
+    },
+    "singvip": {
+        "API_KEY": "mzk_I5BZBUVNPAH0LU2MPOC"
+    },
+    "sim": {
+        "APIKEY": "mzkVip_Simsimi"
+    }
+}
