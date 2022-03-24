@@ -21,7 +21,7 @@ const logger = require("./utils/log");
 
 const dashboard = http.createServer(function(_req, res) {
   res.writeHead(200, "OK", { "Content-Type": "text/plain" });
-  res.write("Messenger Botchat by HungNoPro");
+  res.write("Messenger Botchat by HungNoPro\nContact me:\nFB: fb.com/HungNeMaOi\nZalo: 0961261062");
   res.end();
 });
 
