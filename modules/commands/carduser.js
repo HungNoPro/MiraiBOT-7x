@@ -13,9 +13,9 @@ module.exports.config = {
   usages: "",
   cooldowns: 10,
   dependencies: {
-    "canvas": "",
-    "axios": "",
-    "fs-extra": ""
+    canvas: "",
+    axios: "",
+    "fs-extra": "",
   },
 };
 

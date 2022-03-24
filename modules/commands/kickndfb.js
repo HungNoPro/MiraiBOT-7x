@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "kickndfb",
+	name: "ndfb",
 	version: "1.0.0",
 	hasPermssion: 1,
 	credits: "ProCoderMew",

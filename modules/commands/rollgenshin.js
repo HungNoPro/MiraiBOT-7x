@@ -59,6 +59,6 @@ const fs = global.nodemodule["fs-extra"];
   var min = Math.floor(Math.random() * 2);
   var data = await Currencies.getData(event.senderID);
   var exp =  data.exp;
-   var callback = () => api.sendMessage({body:`💕✦Chúc mừng bạn đã roll thành công✦💕\n» Đến lúc kiểm tra vận may rồi ♬ «`,attachment: fs.createReadStream(__dirname + "/cache/genshin/1.mp4")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/genshin/1.mp4")); 
+   var callback = () => api.sendMessage({body:`💕✦Chúc mừng bạn đã roll thành công✦💕\n» Đến lúc kiểm tra vận may rồi ♬ «` ,attachment: fs.createReadStream(__dirname + "/cache/genshin/1.mp4")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/genshin/1.mp4"),event.messageID); 
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/genshin/1.mp4")).on("close",() => callback());
 };

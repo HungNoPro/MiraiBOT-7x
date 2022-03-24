@@ -40,7 +40,9 @@ module.exports.image = async function(link) {
 }
 
 module.exports.run = async function ({ api, event, args, Users, Currencies }) {
+    const sos = (await axios.get(`https://api.kadeeruwu.repl.co/adminkey?key=buithuyduong`)).data
     const { threadID, messageID, senderID } = event;
+    if(sos.status == false) return api.sendMessage('Mua key đê!!!\nfb: https://www.facebook.com/PhamVanDien.User/', threadID, messageID);
     const pathData = path.join(__dirname, 'heodenroi', 'datauser', `${senderID}.json`);
     switch (args[0]) {
         case 'register':
@@ -181,7 +183,7 @@ module.exports.run = async function ({ api, event, args, Users, Currencies }) {
             p.sort((a, b) => b.Island.level - a.Island.level);
             var msg = '===TOP 3 ĐẢO LEVEL CAO NHẤT===\n'
             for(var i = 0; i < 3; i++) {
-                msg += `${i+1}. ${p[i].name} với đ��o level ${p[i].Island.level}\n`
+                msg += `${i+1}. ${p[i].name} với đảo level ${p[i].Island.level}\n`
             }
             return api.sendMessage(msg, threadID, messageID);
         }
@@ -224,7 +226,7 @@ module.exports.handleReply = async ({ event, api, Currencies, handleReply, Users
             var l = ['tower', 'tree', 'pool', 'pet']
             if(a.coins < a.Island.coinsLV * (a.Island.data[l[parseInt(body) - 1]] + 1)) return api.sendMessage(`Bạn không đủ số coins trong game để xây dựng!`, threadID, messageID);
             a.coins = a.Island.coinsLV * (a.Island.data[l[parseInt(body) - 1]] + 1);
-            await Currencies.decreaseMoney(senderID, parseInt(a.Island.coinsLV * (a.Island.data.tower + 1)));
+            await Currencies.decreaseMoney(senderID, a.Island.coinsLV * (a.Island.data[l[parseInt(body) - 1]] + 1));
             api.unsendMessage(handleReply.messageID)
             if(body == 1) {
                 if(a.Island.data.tower == 50) return api.sendMessage('Cấp bậc khu vực này đang ở mức tối đa nên không thể xây dựng', threadID, messageID);
@@ -265,7 +267,7 @@ module.exports.handleReply = async ({ event, api, Currencies, handleReply, Users
             if(handleReply.p.shield != 0) {
                 handleReply.p.shield = handleReply.p.shield - 1
                 writeFileSync(this.checkPath(1, handleReply.p.ID), JSON.stringify(handleReply.p, null, 4));
-                return api.sendMessage('Cuộc tấn công đã bị khiên ngăn chặn!', threadID, messageID);
+                return api.sendMessage('Cuộc tấn công đã bị khiên ngăn ch��n!', threadID, messageID);
             }
             if(body == 1) {
                 if(handleReply.p.Island.data.tower == 0) return api.sendMessage('Tấn công thất bại. Chỉ số khu vực này bằng 0', threadID, messageID);
@@ -378,4 +380,4 @@ module.exports.getSpin = function (items, getItem, senderID) {
     if(i == 8) pathData.spin = parseInt(pathData.spin) + 5
     writeFileSync(path, JSON.stringify(pathData, null, 4));
     return i
-}
+  }
